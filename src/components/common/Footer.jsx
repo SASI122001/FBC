@@ -34,7 +34,7 @@ export default function Footer() {
                             <ul className="space-y-2">
                                 <li><Link to="/visit" className="hover:text-church-accent transition-colors">Location & Times</Link></li>
                                 <li><Link to="/membership" className="hover:text-church-accent transition-colors">Membership</Link></li>
-                                <li><p>{siteData.contact.address}, Lubbock</p></li>
+                                <li><p>{siteData.contact.address}, {siteData.contact.city}</p></li>
                             </ul>
                         </div>
                         <div>

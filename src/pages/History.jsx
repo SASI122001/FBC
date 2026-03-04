@@ -6,28 +6,28 @@ const timeline = [
         year: '1998',
         title: 'Founded in Faith',
         description:
-            'First Baptist Church was planted by a small group of families with a vision to preach the whole counsel of God to the city of Lubbock.',
+            'First Baptist Church of Wink Texas was planted by a small group of families with a vision to preach the whole counsel of God to the city of Wink.',
         right: true,
     },
     {
         year: '2005',
         title: 'Building Our First Home',
         description:
-            'After years of meeting in a school gymnasium, God provided the resources to build our first dedicated church building on the south side of Lubbock.',
+            'After years of meeting in a school gymnasium, God provided the resources to build our first dedicated church building in Wink, Texas.',
         right: false,
     },
     {
         year: '2010',
         title: 'Growth & Pastoral Transition',
         description:
-            'Dr. David Miller accepted the call as Lead Pastor, and the church experienced a season of rapid growth, requiring multiple Sunday services.',
+            'A new pastor accepted the call as Lead Pastor, and the church experienced a season of rapid growth, requiring multiple Sunday services.',
         right: true,
     },
     {
         year: '2018',
-        title: 'Moving to Avenue U',
+        title: 'Moving to N. Cross Ave',
         description:
-            "By God's grace, we moved into our current, expanded campus at 7505 Avenue U to better accommodate our thriving children's and youth ministries.",
+            "By God's grace, we moved into our current campus at 217 N.Cross Ave to better accommodate our thriving children's and youth ministries.",
         right: false,
     },
 ];

@@ -14,7 +14,7 @@ A modern, fully responsive static website for **First Baptist Church (FCL)**, bu
 
 ```bash
 # 1. Navigate into the project folder
-cd sasi_frnd_website
+cd FBC
 
 # 2. Install dependencies
 npm install
@@ -171,8 +171,10 @@ src/
 
 ## ✝️ About the Church
 
+```markdown
 **First Baptist Church** — *Knowing, Proclaiming, & Living the Word of God.*
 
-📍 7505 Avenue U, Lubbock, TX 79423  
-📞 (806) 589-3063  
-✉️ contact@fellowshiplubbock.com
+📍 217 N.Cross Ave, Wink, TX 79789  
+📞 +254 68 15120  
+✉️ sarahewell31@gmail.com
+```

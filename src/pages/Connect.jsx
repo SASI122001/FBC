@@ -28,7 +28,7 @@ export default function Connect() {
                             <div className="text-church-accent mb-4"><Users className="w-10 h-10" /></div>
                             <h2 className="text-4xl font-serif text-church-dark mb-4">Small Groups</h2>
                             <p className="text-slate-600 font-light leading-relaxed mb-6">
-                                We believe that spiritual growth happens best in community. Our small groups meet throughout the week in homes across Lubbock to share meals, pray, and discuss the Word together.
+                                We believe that spiritual growth happens best in community. Our small groups meet throughout the week in homes across Wink to share meals, pray, and discuss the Word together.
                             </p>
                             <a
                                 href="#"

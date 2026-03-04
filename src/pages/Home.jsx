@@ -161,7 +161,7 @@ export default function Home() {
                             <div className="relative z-10">
                                 <div className="text-church-accent mb-3"><Users className="w-8 h-8" /></div>
                                 <h3 className="text-2xl font-serif text-church-dark mb-1">Small Groups</h3>
-                                <p className="text-slate-600 font-light">Doing life together in homes across Lubbock.</p>
+                                <p className="text-slate-600 font-light">Doing life together in homes across Wink.</p>
                             </div>
                             <div className="relative z-10">
                                 <Link to="/connect" className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-church-dark group-hover:bg-church-accent group-hover:text-white transition-colors">
