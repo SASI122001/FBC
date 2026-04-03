@@ -61,6 +61,7 @@ export default function Navbar() {
 
                     <Link to="/connect" className="hover:text-church-accent transition-colors py-2">Connect</Link>
                     <Link to="/sermons" className="hover:text-church-accent transition-colors py-2">Sermons</Link>
+                    <Link to="/homeschool" className="hover:text-church-accent transition-colors py-2">FBC Academy</Link>
                 </div>
 
                 {/* Right CTAs */}
@@ -95,6 +96,7 @@ export default function Navbar() {
                     <hr className="border-slate-200 my-1" />
                     <Link to="/connect" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">Connect</Link>
                     <Link to="/sermons" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">Sermons</Link>
+                    <Link to="/homeschool" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">FBC Academy</Link>
                     <Link to="/give" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">Give</Link>
                 </div>
             )}

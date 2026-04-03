@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { Users, HeartHandshake, ArrowRight } from 'lucide-react';
 import PageHeader from '../components/common/PageHeader';
 import Reveal from '../components/common/Reveal';
+import smallGroupImg from '../../assets/images/small_group.png';
+import churchServingImg from '../../assets/images/church_serving.png';
 
 export default function Connect() {
     return (
@@ -19,7 +21,7 @@ export default function Connect() {
                     <div className="grid md:grid-cols-2 gap-16 mb-24 items-center">
                         <Reveal direction="left">
                             <img
-                                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1470&auto=format&fit=crop"
+                                src={smallGroupImg}
                                 className="rounded-3xl shadow-xl w-full h-[400px] object-cover"
                                 alt="Small Groups"
                             />
@@ -56,7 +58,7 @@ export default function Connect() {
                         </Reveal>
                         <Reveal className="md:order-2 order-1">
                             <img
-                                src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1471&auto=format&fit=crop"
+                                src={churchServingImg}
                                 className="rounded-3xl shadow-xl w-full h-[400px] object-cover"
                                 alt="Serving"
                             />

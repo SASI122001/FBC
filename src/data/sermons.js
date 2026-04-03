@@ -1,3 +1,7 @@
+import sermonImg from '../../assets/images/sermon_preaching.png';
+import bibleImg from '../../assets/images/bible_study.png';
+import worshipImg from '../../assets/images/church_worship.png';
+
 export const currentSeries = {
     title: "The Book of Romans",
     description:
@@ -8,10 +12,9 @@ export const currentSeries = {
         scripture: "Romans 8:1-17",
         description:
             "Join us as we journey through Paul's letter to the Romans, exploring the profound depths of the gospel, righteousness, and the grace of God.",
-        image:
-            "https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=1542&auto=format&fit=crop",
-        seriesImage:
-            "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1470&auto=format&fit=crop",
+        image: sermonImg,
+        seriesImage: bibleImg,
+        listenUrl: "#",
     },
 };
 
@@ -21,23 +24,23 @@ export const pastSeries = [
         book: "Ephesians",
         title: "Our Identity in Christ",
         count: "12 Messages",
-        image:
-            "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1470&auto=format&fit=crop",
+        image: worshipImg,
+        listenUrl: "#",
     },
     {
         id: 2,
         book: "Psalms",
         title: "Songs of the Heart",
         count: "8 Messages",
-        image:
-            "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1476&auto=format&fit=crop",
+        image: bibleImg,
+        listenUrl: "#",
     },
     {
         id: 3,
         book: "The Sermon on the Mount",
         title: "Kingdom Living",
         count: "15 Messages",
-        image:
-            "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1469&auto=format&fit=crop",
+        image: sermonImg,
+        listenUrl: "#",
     },
 ];

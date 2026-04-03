@@ -9,6 +9,7 @@ import Visit from './pages/Visit';
 import Leadership from './pages/Leadership';
 import History from './pages/History';
 import Membership from './pages/Membership';
+import Homeschool from './pages/Homeschool';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
             { path: 'leadership', element: <Leadership /> },
             { path: 'history', element: <History /> },
             { path: 'membership', element: <Membership /> },
+            { path: 'homeschool', element: <Homeschool /> },
         ],
     },
 ]);

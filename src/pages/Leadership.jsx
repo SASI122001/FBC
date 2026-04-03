@@ -1,5 +1,8 @@
 import PageHeader from '../components/common/PageHeader';
 import Reveal from '../components/common/Reveal';
+import sermonPreachingImg from '../../assets/images/sermon_preaching.png';
+import churchWorshipImg from '../../assets/images/church_worship.png';
+import worshipMusicImg from '../../assets/images/worship_music.png';
 
 export default function Leadership() {
     const staff = [
@@ -7,19 +10,19 @@ export default function Leadership() {
             name: 'Pastor John Doe',
             role: 'Lead Pastor',
             bio: 'Pastor John has served First Baptist Church for over 15 years, faithfully preaching the Word and shepherding the congregation.',
-            image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop',
+            image: sermonPreachingImg,
         },
         {
             name: 'Jane Smith',
             role: 'Director of Ministries',
             bio: 'Jane oversees all lay ministry programs, from small groups to serve teams, ensuring every member finds their place in the body.',
-            image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?q=80&w=600&auto=format&fit=crop',
+            image: churchWorshipImg,
         },
         {
             name: 'Mark Davis',
             role: 'Worship Leader',
             bio: 'Mark leads our congregation in Scripture-rich worship, guiding our music ministry with joy and excellence.',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
+            image: worshipMusicImg,
         },
     ];
 

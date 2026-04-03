@@ -2,6 +2,7 @@ import { MapPin, Calendar } from 'lucide-react';
 import PageHeader from '../components/common/PageHeader';
 import Reveal from '../components/common/Reveal';
 import { siteData } from '../config/siteData';
+import churchWorshipImg from '../../assets/images/church_worship.png';
 
 export default function Visit() {
     return (
@@ -60,9 +61,9 @@ export default function Visit() {
                                 {/* Map Placeholder */}
                                 <div className="flex-grow bg-slate-800 rounded-2xl relative overflow-hidden group min-h-[300px]">
                                     <img
-                                        src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1474&auto=format&fit=crop"
+                                        src={churchWorshipImg}
                                         className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:opacity-70 group-hover:mix-blend-normal transition-all duration-700"
-                                        alt="Map Location"
+                                        alt="Church Campus"
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                         <div className="w-12 h-12 bg-church-accent rounded-full flex items-center justify-center shadow-2xl relative">

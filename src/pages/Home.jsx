@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import { Clock, MapPin, ArrowRight, Play, Library, Baby, Music, Users, Calendar } from 'lucide-react';
 import Reveal from '../components/common/Reveal';
 import { siteData } from '../config/siteData';
+import churchWorshipImg from '../../assets/images/church_worship.png';
+import childrenMinistryImg from '../../assets/images/children_ministry.png';
+import worshipMusicImg from '../../assets/images/worship_music.png';
+import sermonPreachingImg from '../../assets/images/sermon_preaching.png';
 
 export default function Home() {
     return (
@@ -74,8 +78,8 @@ export default function Home() {
                         <Reveal>
                             <div className="relative">
                                 <img
-                                    src="https://images.unsplash.com/photo-1548625361-ec853f6cb4b2?q=80&w=1469&auto=format&fit=crop"
-                                    alt="Worship"
+                                    src={churchWorshipImg}
+                                    alt="Worship at First Baptist Church"
                                     className="rounded-3xl shadow-2xl z-10 relative"
                                 />
                                 <div className="absolute -bottom-8 -left-8 w-2/3 h-2/3 border-2 border-church-accent rounded-3xl -z-10 hidden sm:block" />
@@ -118,9 +122,9 @@ export default function Home() {
                         {/* Kids */}
                         <Reveal className="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group">
                             <img
-                                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1470&auto=format&fit=crop"
+                                src={childrenMinistryImg}
                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                alt="Kids"
+                                alt="Children's Ministry"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-church-dark/90 via-church-dark/40 to-transparent" />
                             <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -138,9 +142,9 @@ export default function Home() {
                         {/* Music */}
                         <Reveal className="md:col-span-1 md:row-span-2 relative rounded-3xl overflow-hidden group bg-church-dark">
                             <img
-                                src="https://images.unsplash.com/photo-1510511459019-5d55ad34fa38?q=80&w=1470&auto=format&fit=crop"
+                                src={worshipMusicImg}
                                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700"
-                                alt="Worship"
+                                alt="Worship Music"
                             />
                             <div className="absolute inset-0 p-8 flex flex-col justify-between">
                                 <div className="bg-white/10 backdrop-blur-md w-12 h-12 rounded-full flex items-center justify-center text-white self-end">
@@ -192,7 +196,7 @@ export default function Home() {
                             <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                                 <Link to="/sermons" className="relative rounded-2xl overflow-hidden aspect-video group cursor-pointer border border-white/10 shadow-glass">
                                     <img
-                                        src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=1542&auto=format&fit=crop"
+                                        src={sermonPreachingImg}
                                         className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
                                         alt="Sermon"
                                     />
