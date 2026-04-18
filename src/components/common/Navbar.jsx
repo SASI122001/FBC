@@ -6,8 +6,8 @@ import fbcLogo from '../../../assets/images/FBC_Logo.jpeg';
 
 const aboutLinks = [
     { label: 'What We Believe', to: '/believe' },
+    { label: 'Confession', to: '/confession' },
     { label: 'Leadership & Staff', to: '/leadership' },
-    { label: 'Covenant Membership', to: '/membership' },
     { label: 'History', to: '/history' },
     { label: 'Location & Times', to: '/visit' },
 ];
@@ -62,6 +62,7 @@ export default function Navbar() {
                     <Link to="/connect" className="hover:text-church-accent transition-colors py-2">Connect</Link>
                     <Link to="/sermons" className="hover:text-church-accent transition-colors py-2">Sermons</Link>
                     <Link to="/homeschool" className="hover:text-church-accent transition-colors py-2">FBC Academy</Link>
+                    <Link to="/portal" className="hover:text-church-accent transition-colors py-2 font-semibold text-church-accent">My Portal</Link>
                 </div>
 
                 {/* Right CTAs */}

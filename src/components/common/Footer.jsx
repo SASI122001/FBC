@@ -34,7 +34,7 @@ export default function Footer() {
                             <h4 className="text-white font-medium mb-4 uppercase tracking-widest text-xs">Visit</h4>
                             <ul className="space-y-2">
                                 <li><Link to="/visit" className="hover:text-church-accent transition-colors">Location & Times</Link></li>
-                                <li><Link to="/membership" className="hover:text-church-accent transition-colors">Membership</Link></li>
+                                <li><Link to="/confession" className="hover:text-church-accent transition-colors">Confession</Link></li>
                                 <li><p>{siteData.contact.address}, {siteData.contact.city}</p></li>
                             </ul>
                         </div>

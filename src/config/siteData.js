@@ -20,8 +20,8 @@ export const siteData = {
     },
 
     services: [
-        { name: "Bible Classes", subtitle: "For Adults, Youth, & Children", time: "9:00 AM" },
-        { name: "Morning Worship", subtitle: "Main Sanctuary", time: "10:00 AM" },
+        { name: "Bible Classes", subtitle: "For Adults, Youth, & Children", time: "9:45 AM" },
+        { name: "Morning Worship", subtitle: "Main Sanctuary", time: "11:00 AM" },
     ],
 
     socials: {

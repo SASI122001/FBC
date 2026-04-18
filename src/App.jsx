@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import Believe from './pages/Believe';
@@ -8,8 +8,9 @@ import Give from './pages/Give';
 import Visit from './pages/Visit';
 import Leadership from './pages/Leadership';
 import History from './pages/History';
-import Membership from './pages/Membership';
+import Confession from './pages/Confession';
 import Homeschool from './pages/Homeschool';
+import Portal from './pages/Portal';
 
 const router = createBrowserRouter([
     {
@@ -24,8 +25,10 @@ const router = createBrowserRouter([
             { path: 'visit', element: <Visit /> },
             { path: 'leadership', element: <Leadership /> },
             { path: 'history', element: <History /> },
-            { path: 'membership', element: <Membership /> },
+            { path: 'confession', element: <Confession /> },
+            { path: 'membership', element: <Navigate to="/confession" replace /> },
             { path: 'homeschool', element: <Homeschool /> },
+            { path: 'portal', element: <Portal /> },
         ],
     },
 ]);
