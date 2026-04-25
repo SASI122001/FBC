@@ -11,7 +11,7 @@ export const siteData = {
     heroLocation: "Wink, Texas",
 
     contact: {
-        phone: "+254 68 15120",
+        phone: "+1 254 68 15120",
         email: "sarahewell31@gmail.com",
         address: "217 N.Cross Ave Wink TX 79789",
         city: "Wink, TX, United States, 79789",

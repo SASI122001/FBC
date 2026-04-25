@@ -1,28 +1,12 @@
 import PageHeader from '../components/common/PageHeader';
 import Reveal from '../components/common/Reveal';
-import sermonPreachingImg from '../../assets/images/sermon_preaching.png';
-import churchWorshipImg from '../../assets/images/church_worship.png';
-import worshipMusicImg from '../../assets/images/worship_music.png';
 
 export default function Leadership() {
     const staff = [
         {
-            name: 'Pastor John Doe',
-            role: 'Lead Pastor',
-            bio: 'Pastor John has served First Baptist Church for over 15 years, faithfully preaching the Word and shepherding the congregation.',
-            image: sermonPreachingImg,
-        },
-        {
-            name: 'Jane Smith',
-            role: 'Director of Ministries',
-            bio: 'Jane oversees all lay ministry programs, from small groups to serve teams, ensuring every member finds their place in the body.',
-            image: churchWorshipImg,
-        },
-        {
-            name: 'Mark Davis',
-            role: 'Worship Leader',
-            bio: 'Mark leads our congregation in Scripture-rich worship, guiding our music ministry with joy and excellence.',
-            image: worshipMusicImg,
+            name: 'Pastor Chris Ewell',
+            role: 'Pastor',
+            bio: 'Pastor Chris faithfully shepherds the congregation of First Baptist Church of Wink, Texas, preaching the Word and leading with Gospel-centered devotion.',
         },
     ];
 
@@ -39,17 +23,21 @@ export default function Leadership() {
                         {staff.map((person, i) => (
                             <Reveal key={person.name} delay={i * 100}>
                                 <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl hover:border-church-accent transition-all group">
-                                    <div className="h-64 overflow-hidden">
-                                        <img
-                                            src={person.image}
-                                            alt={person.name}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    </div>
+                                    {person.image && (
+                                        <div className="h-64 overflow-hidden">
+                                            <img
+                                                src={person.image}
+                                                alt={person.name}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                            />
+                                        </div>
+                                    )}
                                     <div className="p-6">
                                         <p className="text-church-accent text-sm font-medium uppercase tracking-widest mb-1">{person.role}</p>
                                         <h3 className="text-2xl font-serif text-church-dark mb-3">{person.name}</h3>
-                                        <p className="text-slate-600 font-light leading-relaxed">{person.bio}</p>
+                                        {person.bio && (
+                                            <p className="text-slate-600 font-light leading-relaxed">{person.bio}</p>
+                                        )}
                                     </div>
                                 </div>
                             </Reveal>

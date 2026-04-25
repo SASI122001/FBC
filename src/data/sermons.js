@@ -44,3 +44,31 @@ export const pastSeries = [
         listenUrl: "#",
     },
 ];
+
+// Latest YouTube videos from https://www.youtube.com/@firstbaptistchurchofwinktx4828/videos
+export const latestYouTubeVideos = [
+    {
+        id: 'd9gupPAdmRU',
+        title: 'Asking in Christ\'s Name – John 14:13-14 (Part 2)',
+    },
+    {
+        id: 'TWih5-2bhjI',
+        title: 'Asking in Christ\'s Name – John 14:13-14',
+    },
+    {
+        id: '56S5R4CZ7f4',
+        title: 'The Understanding of Scripture – 2 Peter 3:14-18',
+    },
+    {
+        id: 'aKKqbHinvOo',
+        title: 'Faithful Church of God – Hebrews 10:23-25',
+    },
+    {
+        id: 'zJFmo9Q421o',
+        title: 'Look into the Empty Tomb – Romans 8:34',
+    },
+    {
+        id: 'uKvIs0gWM6M',
+        title: 'The Joy of Enduring the Cross – Hebrews 12:1-3 (Good Friday)',
+    },
+];

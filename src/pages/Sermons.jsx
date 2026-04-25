@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Headphones, ExternalLink } from 'lucide-react';
+import { Youtube } from 'lucide-react';
 import PageHeader from '../components/common/PageHeader';
 import Reveal from '../components/common/Reveal';
-import { currentSeries, pastSeries } from '../data/sermons';
+import { latestYouTubeVideos } from '../data/sermons';
 
 export default function Sermons() {
     return (
@@ -13,97 +12,82 @@ export default function Sermons() {
                 subtitle="Listen to past messages, browse by series, or search by scripture."
             />
 
-            <section className="py-24 bg-church-light">
+            {/* ── Latest YouTube Messages Section ── */}
+            <section className="py-20 bg-church-dark">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                    {/* Current Series Feature */}
                     <Reveal>
-                        <div className="bg-white rounded-[2rem] p-4 md:p-8 shadow-sm border border-slate-200 mb-16">
-                            <div className="grid lg:grid-cols-2 gap-12 items-center">
-                                <div className="relative rounded-2xl overflow-hidden aspect-video group cursor-pointer shadow-md">
-                                    <img
-                                        src={currentSeries.latestMessage.seriesImage}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                        alt="Current Series"
-                                    />
-                                    <div className="absolute inset-0 bg-church-dark/30 flex items-center justify-center">
-                                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-church-dark group-hover:bg-church-accent group-hover:text-white transition-colors">
-                                            <Play className="w-6 h-6 ml-1" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span className="text-church-accent font-medium text-sm tracking-widest uppercase mb-2 block">Current Series</span>
-                                    <h2 className="text-4xl font-serif text-church-dark mb-4">{currentSeries.title}</h2>
-                                    <p className="text-slate-600 font-light mb-6">{currentSeries.description}</p>
-
-                                    {/* Listen button with link */}
-                                    <div className="flex flex-wrap gap-3">
-                                        <a
-                                            href={currentSeries.latestMessage.listenUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="bg-church-dark text-white px-6 py-3 rounded-full font-medium hover:bg-church-accent transition-colors inline-flex items-center gap-2"
-                                        >
-                                            Listen to Latest <Headphones className="w-4 h-4" />
-                                        </a>
-                                        <a
-                                            href={currentSeries.latestMessage.listenUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="border border-slate-300 text-church-dark px-6 py-3 rounded-full font-medium hover:border-church-accent hover:text-church-accent transition-colors inline-flex items-center gap-2"
-                                        >
-                                            Open in New Tab <ExternalLink className="w-4 h-4" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="text-center mb-12">
+                            <span className="inline-flex items-center gap-2 text-red-400 font-medium text-sm tracking-widest uppercase mb-3">
+                                <Youtube className="w-4 h-4" /> Live &amp; Recent Messages
+                            </span>
+                            <h2 className="text-4xl font-serif text-white">Latest Messages from FBC</h2>
                         </div>
                     </Reveal>
 
-                    {/* Past Series Grid */}
-                    <Reveal>
-                        <h3 className="text-2xl font-serif text-church-dark mb-8">Past Series</h3>
-                    </Reveal>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {pastSeries.map((series, i) => (
-                            <Reveal key={series.id} delay={i * 100}>
+                    {/* Video Cards Grid */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {latestYouTubeVideos.map((video, i) => (
+                            <Reveal key={video.id} delay={i * 80}>
                                 <a
-                                    href={series.listenUrl}
+                                    href={`https://www.youtube.com/watch?v=${video.id}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group block bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl hover:border-church-accent transition-all"
+                                    className="group block rounded-2xl overflow-hidden border border-white/10 hover:border-red-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-1"
                                 >
-                                    <div className="h-48 overflow-hidden relative bg-slate-800">
-                                        <div className="absolute inset-0 flex items-center justify-center text-white font-serif text-3xl z-10 text-center px-4">
-                                            {series.book}
-                                        </div>
+                                    {/* Thumbnail */}
+                                    <div className="relative aspect-video bg-slate-800 overflow-hidden">
                                         <img
-                                            src={series.image}
-                                            className="w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-50 transition-all duration-500"
-                                            alt={series.book}
+                                            src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                                            alt={video.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                            loading="lazy"
                                         />
-                                        {/* Play overlay on hover */}
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                                            <div className="w-14 h-14 bg-church-accent/90 rounded-full flex items-center justify-center shadow-lg">
-                                                <Play className="w-6 h-6 text-white ml-0.5" />
+                                        {/* Dark overlay */}
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                                        {/* Red YouTube play button */}
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="w-14 h-14 bg-[#FF0000] rounded-full flex items-center justify-center shadow-lg shadow-red-900/50 group-hover:scale-110 transition-transform duration-300">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-7 h-7 ml-0.5">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
                                             </div>
                                         </div>
+                                        {/* "Watch on YouTube" badge */}
+                                        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-3 flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 text-white shrink-0" fill="currentColor">
+                                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                            </svg>
+                                            <span className="text-white text-xs font-medium">Watch on YouTube</span>
+                                        </div>
                                     </div>
-                                    <div className="p-6">
-                                        <h4 className="text-xl font-bold text-church-dark mb-1">{series.title}</h4>
-                                        <p className="text-sm text-slate-500 mb-4">{series.count}</p>
-                                        <span className="text-church-accent font-medium flex items-center gap-1 text-sm">
-                                            Listen to Series <Headphones className="w-3 h-3" />
-                                        </span>
+                                    {/* Title */}
+                                    <div className="bg-slate-800/80 px-4 py-3">
+                                        <p className="text-sm text-slate-200 font-medium leading-snug line-clamp-2 group-hover:text-white transition-colors">
+                                            {video.title}
+                                        </p>
                                     </div>
                                 </a>
                             </Reveal>
                         ))}
                     </div>
 
+                    {/* View All Button */}
+                    <Reveal>
+                        <div className="mt-10 text-center">
+                            <a
+                                href="https://www.youtube.com/@firstbaptistchurchofwinktx4828/videos"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-[#FF0000] hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg shadow-red-900/40"
+                            >
+                                <Youtube className="w-5 h-5" />
+                                View All Videos on YouTube
+                            </a>
+                        </div>
+                    </Reveal>
                 </div>
             </section>
+
         </>
     );
 }
