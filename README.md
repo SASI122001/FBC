@@ -88,13 +88,6 @@ The sermon library page, giving access to past and current teaching:
 
 ---
 
-### 💛 Give (`/give`)
-Explains the theology of generosity and provides ways to give financially:
-- **Why We Give** — A short explanation of biblical stewardship.
-- **Ways to Give** — Text-to-give, mailing a check.
-- **Online Giving Widget** — An interactive card where users can select a preset amount ($50, $100, $250) or enter a custom amount, and choose between one-time or recurring giving.
-
----
 
 ### 📍 Location & Times (`/visit`)
 Everything a first-time visitor needs to plan their trip:
@@ -111,10 +104,6 @@ Introduces the pastoral and ministry staff team with photo cards showing:
 
 ---
 
-### 📜 History (`/history`)
-Tells the church's founding story through an elegant alternating **visual timeline** — from 1998 (founding) through 2018 (moving to the current Avenue U campus).
-
----
 
 ### ✋ Membership (`/membership`)
 Walks through what it means to become a covenant member and what steps to take:
@@ -160,10 +149,8 @@ src/
     ├── Believe.jsx
     ├── Connect.jsx
     ├── Sermons.jsx
-    ├── Give.jsx
     ├── Visit.jsx
     ├── Leadership.jsx
-    ├── History.jsx
     └── Membership.jsx
 ```
 

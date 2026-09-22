@@ -15,7 +15,6 @@ export const siteData = {
         email: "sarahewell31@gmail.com",
         address: "217 N.Cross Ave Wink TX 79789",
         city: "Wink, TX, United States, 79789",
-        textToGive: "806-555-0199",
         googleMapsUrl: "https://maps.app.goo.gl/zYz7FBmzjPRjyReH8?g_st=iw",
     },
 

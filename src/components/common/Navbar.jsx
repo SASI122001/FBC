@@ -8,7 +8,6 @@ const aboutLinks = [
     { label: 'What We Believe', to: '/believe' },
     { label: 'Confession', to: '/confession' },
     { label: 'Leadership & Staff', to: '/leadership' },
-    { label: 'History', to: '/history' },
     { label: 'Location & Times', to: '/visit' },
 ];
 
@@ -66,7 +65,6 @@ export default function Navbar() {
 
                 {/* Right CTAs */}
                 <div className="flex items-center gap-3">
-                    <Link to="/give" className="hidden md:block text-sm font-medium hover:text-church-accent transition-colors">Give</Link>
                     <Link
                         to="/visit"
                         className="bg-church-dark text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-church-accent transition-colors shadow-md"
@@ -96,7 +94,6 @@ export default function Navbar() {
                     <hr className="border-slate-200 my-1" />
                     <Link to="/sermons" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">Sermons</Link>
                     <Link to="/homeschool" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">FBC Academy</Link>
-                    <Link to="/give" onClick={() => setMobileOpen(false)} className="hover:text-church-accent transition-colors">Give</Link>
                 </div>
             )}
         </div>

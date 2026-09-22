@@ -26,7 +26,6 @@ export default function Footer() {
                             <ul className="space-y-2">
                                 <li><Link to="/believe" className="hover:text-church-accent transition-colors">What We Believe</Link></li>
                                 <li><Link to="/leadership" className="hover:text-church-accent transition-colors">Leadership</Link></li>
-                                <li><Link to="/history" className="hover:text-church-accent transition-colors">History</Link></li>
                                 <li><Link to="/homeschool" className="hover:text-church-accent transition-colors">FBC Academy</Link></li>
                             </ul>
                         </div>

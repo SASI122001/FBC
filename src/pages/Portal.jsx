@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     BookOpen,
-    Heart,
     Calendar,
     Map,
     Play,
@@ -21,7 +20,6 @@ import {
     UserCheck,
     Home,
     Handshake,
-    Library,
     ChevronRight,
     Bell,
     Info,
@@ -32,12 +30,10 @@ import { siteData } from '../config/siteData';
 
 const quickLinks = [
     { id: 'ql-sermons',    icon: Play,       label: 'Sermons',         sub: 'Watch & listen',        to: '/sermons',    color: 'from-amber-500 to-orange-600' },
-    { id: 'ql-give',       icon: Heart,      label: 'Give Online',     sub: 'Support the mission',   to: '/give',       color: 'from-rose-500 to-pink-600' },
     { id: 'ql-visit',      icon: MapPin,     label: 'Plan a Visit',    sub: 'First time here?',      to: '/visit',      color: 'from-emerald-500 to-teal-600' },
     { id: 'ql-academy',    icon: BookOpen,   label: 'FBC Academy',     sub: 'Homeschool co-op',     to: '/homeschool', color: 'from-violet-500 to-purple-600' },
     { id: 'ql-believe',    icon: BookMarked, label: 'What We Believe', sub: 'Doctrine & confession', to: '/believe',    color: 'from-sky-500 to-cyan-600' },
     { id: 'ql-leadership', icon: UserCheck,  label: 'Leadership',      sub: 'Pastoral staff',        to: '/leadership', color: 'from-slate-500 to-gray-600' },
-    { id: 'ql-history',    icon: Library,    label: 'Our History',     sub: 'Since 1998',            to: '/history',    color: 'from-stone-500 to-amber-700' },
 ];
 
 const announcements = [
