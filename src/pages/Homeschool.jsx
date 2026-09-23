@@ -5,9 +5,6 @@ import {
     ArrowRight, School, Target, CalendarDays, Menu, X
 } from 'lucide-react';
 import { homeschoolData } from '../data/homeschool';
-import homeschoolStudentsImg from '../../assets/images/homeschool_students.png';
-
-const academyBgImg = homeschoolStudentsImg;
 
 const navItems = [
     { key: 'mission', label: 'Mission', icon: Target },
@@ -24,10 +21,7 @@ export default function Homeschool() {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <div
-            className="h-[calc(100vh-7rem)] min-h-[600px] w-full overflow-hidden flex relative mt-28 bg-cover bg-center"
-            style={{ backgroundImage: `linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.75)), url(${academyBgImg})` }}
-        >
+        <div className="h-[calc(100vh-7rem)] min-h-[600px] w-full overflow-hidden flex relative mt-28 bg-gradient-to-br from-slate-900 via-church-dark to-slate-950">
             {/* ── SIDE NAV ────────────────────────────────── */}
             <aside
                 className={`${navOpen ? 'w-64' : 'w-20'} transition-all duration-300 bg-church-dark/90 backdrop-blur-md text-white flex flex-col shrink-0 z-20 relative`}
@@ -90,32 +84,37 @@ export default function Homeschool() {
                     {/* Active panel */}
                     <div className="bg-white/95 backdrop-blur-sm rounded-3xl border border-white/40 shadow-xl p-6 md:p-10">
                         {active === 'mission' && (
-                            <div className="grid md:grid-cols-2 gap-8 items-center">
-                                <img
-                                    src={homeschoolStudentsImg}
-                                    alt="Students learning"
-                                    className="rounded-2xl shadow-lg w-full object-cover max-h-80"
-                                />
-                                <div>
-                                    <h2 className="text-2xl md:text-3xl font-serif text-church-dark mb-4">
-                                        Equipping future{' '}
-                                        <span className="italic text-church-accent">Christian leaders.</span>
-                                    </h2>
-                                    <p className="text-slate-600 font-light leading-relaxed mb-5 text-sm md:text-base">
-                                        {homeschoolData.mission}
-                                    </p>
-                                    <blockquote className="border-l-4 border-church-accent pl-4 italic text-slate-600 text-sm mb-5">
-                                        {homeschoolData.scripture.text}
-                                        <footer className="mt-2 not-italic text-xs text-church-accent font-medium">
-                                            — {homeschoolData.scripture.reference}
-                                        </footer>
-                                    </blockquote>
+                            <div className="max-w-3xl">
+                                <span className="inline-block px-3 py-1 bg-church-accent/10 text-church-accent text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
+                                    Our Mission & Vision
+                                </span>
+                                <h2 className="text-2xl md:text-3xl font-serif text-church-dark mb-4">
+                                    Equipping future{' '}
+                                    <span className="italic text-church-accent">Christian leaders.</span>
+                                </h2>
+                                <p className="text-slate-600 font-light leading-relaxed mb-6 text-base md:text-lg">
+                                    {homeschoolData.mission}
+                                </p>
+                                <blockquote className="border-l-4 border-church-accent pl-5 py-3 italic text-slate-700 bg-slate-50 rounded-r-2xl text-sm md:text-base mb-6 shadow-sm">
+                                    {homeschoolData.scripture.text}
+                                    <footer className="mt-2 not-italic text-xs text-church-accent font-semibold tracking-wide">
+                                        — {homeschoolData.scripture.reference}
+                                    </footer>
+                                </blockquote>
+                                <div className="flex flex-wrap gap-4 pt-2">
                                     <Link
                                         to="/believe"
-                                        className="inline-flex items-center gap-2 text-church-accent font-medium text-sm hover:gap-3 transition-all"
+                                        className="inline-flex items-center gap-2 bg-church-dark text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-church-accent transition-colors shadow-md"
                                     >
                                         Read Our Beliefs <ArrowRight className="w-4 h-4" />
                                     </Link>
+                                    <button
+                                        type="button"
+                                        onClick={() => setActive('curriculum')}
+                                        className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-5 py-2.5 rounded-full text-sm font-medium hover:border-church-accent hover:text-church-accent transition-colors"
+                                    >
+                                        Explore Curriculum
+                                    </button>
                                 </div>
                             </div>
                         )}
@@ -228,7 +227,7 @@ export default function Homeschool() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                     <Link
-                                        to="/connect"
+                                        to="/visit"
                                         className="inline-flex items-center justify-center gap-2 bg-church-accent text-white px-6 py-3 rounded-full font-medium hover:bg-amber-600 transition-colors"
                                     >
                                         Contact Us <ArrowRight className="w-4 h-4" />
